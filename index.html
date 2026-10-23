@@ -3,580 +3,313 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Middletown Generator Service — Standby Generator Maintenance in Middletown, NJ</title>
+<title>Middletown Generator Service: Standby Generator Maintenance in Middletown, NJ</title>
 <meta name="description" content="Annual standby generator service and testing for homeowners in Middletown and Monmouth County, NJ. Battery load testing and a simulated power failure that puts your house on generator power. Memberships from $29/month.">
 <link rel="canonical" href="https://middletowngenerators.com/">
-<meta name="theme-color" content="#15171B">
-<!-- PREVIEW ONLY — remove this line when Paul approves and the real domain goes live -->
+<meta name="theme-color" content="#eae4d8">
+<!-- PREVIEW ONLY: remove this line when Paul approves and the real domain goes live -->
 <meta name="robots" content="noindex, nofollow">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://middletowngenerators.com/">
 <meta property="og:site_name" content="Middletown Generator Service">
-<meta property="og:title" content="Your generator starts every week. That doesn't mean it will run your house.">
-<meta property="og:description" content="Annual standby generator service and testing in Middletown and Monmouth County, NJ. Memberships from $29/month.">
+<meta property="og:title" content="Your generator starts every week.">
+<meta property="og:description" content="That does not mean it will run your house. Standby generator service and testing in Middletown and Monmouth County, NJ.">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&amp;family=Spectral:ital,wght@0,400;0,500;1,400&amp;family=Libre+Franklin:wght@500;700&amp;display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --paper:#E9E3D6;
-  --paper-hi:#F4F0E7;
-  --paper-lo:#DCD5C5;
-  --ink:#15171B;
-  --ink-soft:#3A3F47;
-  --steel:#5A6472;
-  --stamp:#B23A2B;
-  --rule:#15171B;
-  --max:1180px;
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{
-  margin:0;background:var(--paper);color:var(--ink);
-  font-family:Archivo,"Helvetica Neue",Helvetica,sans-serif;
-  font-size:19px;line-height:1.6;font-weight:400;
-  -webkit-font-smoothing:antialiased;
-}
-/* paper grain */
-body::before{
-  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.42;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
-}
-body>*{position:relative;z-index:2}
-h1,h2,h3{margin:0;font-weight:900;line-height:.98;letter-spacing:-.025em;text-transform:uppercase}
-a{color:inherit}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
-@media(max-width:700px){.wrap{padding:0 20px}body{font-size:18px}}
+/* Hallmark · shape: Conversational FAQ, from draw 0ce91b · genre: editorial · theme: Newsprint (deal 3/3, seed prompt-da39·68b67dc3·2026-10-23·r0) · redesign: full
+ * hero: Ledge · nav: masthead (swapped from the draw's floating pill; the theme sets radius 0 and rules, never pills) · footer: statement · imagery: none (no photograph exists and inventing one is barred) · signature: twelve minutes set as a box score, the figure the whole argument turns on
+ * axes: light/slab-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P5 H4 E4 S5 R4 V4 · weakest: H, the checklist and the price list both wanted agate rows; set the prices at display size and held the checklist at text size so one listing leads */
+/* Hallmark · swapped the draw's index of projects for the theme's agate listings · no project, client or photograph exists and 46a bars inventing one */
+/* Hallmark · dropped the hero's "See membership pricing" link · the Floor gives the hero one or two actions and both are now call and text, which are the only actions that earn money; #membership is kept as the section id so every existing link still resolves */
+@import url("./tokens.css");
+@import url("./base.css");
 
-.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+/* ---------- masthead ---------- */
+.masthead { border-bottom: 2px solid var(--color-rule-2); }
+.masthead .container { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-lg); padding-block: var(--space-sm); flex-wrap: wrap; }
+.masthead-name { font-family: var(--font-display); font-weight: var(--display-weight); font-size: var(--text-lg); letter-spacing: var(--tracking-display); text-decoration: none; }
+.masthead-line { font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
+.masthead-tel { font-family: var(--font-outlier); font-weight: 700; font-size: var(--text-md); color: var(--color-accent); text-decoration-color: var(--color-accent); text-decoration-thickness: 1px; font-variant-numeric: tabular-nums; }
+.masthead-tel:hover { text-decoration-thickness: 2px; }
 
-/* ============ document strip ============ */
-.docstrip{
-  background:var(--ink);color:var(--paper);
-  font-family:"IBM Plex Mono",monospace;font-size:.68rem;font-weight:500;
-  letter-spacing:.17em;text-transform:uppercase;
-}
-.docstrip .wrap{display:flex;justify-content:space-between;gap:18px;padding-top:11px;padding-bottom:11px;flex-wrap:wrap}
-.docstrip b{color:#E8B4AA;font-weight:600}
+/* ---------- hero: Ledge ---------- */
+.hero { min-height: 100dvh; display: flex; flex-direction: column; justify-content: flex-end; padding-block: var(--space-2xl) var(--space-3xl); border-bottom: 2px solid var(--color-rule-2); }
+.dateline { font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); margin-bottom: var(--space-lg); }
+.hero h1 { font-size: var(--text-display); max-width: 14ch; }
+.hero .lead { margin-top: var(--space-lg); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-xl); }
+.btn { display: inline-block; text-decoration: none; border-radius: 0; padding: var(--space-md) var(--space-lg); font: var(--display-weight) var(--text-md)/1 var(--font-display); }
+.btn-primary { background: var(--color-ink); color: var(--color-paper); }
+.btn-primary:hover { background: var(--color-ink-2); }
+.btn-primary:active { background: var(--color-accent); color: var(--color-accent-ink); }
+.btn-secondary { border-block: var(--rule-hair) solid var(--color-ink); color: var(--color-ink); }
+.btn-secondary:hover { border-block-width: 2px; }
+.btn-secondary:active { background: var(--color-paper-2); }
+a:active { color: var(--color-accent); }
+.masthead-tel:active, .foot-tel:active, .band-tel:active { text-decoration-thickness: 3px; }
+.qa summary:active { background: var(--color-paper-2); }
+.callbar a:active { background: var(--color-accent); color: var(--color-accent-ink); }
 
-/* ============ masthead ============ */
-.masthead{border-bottom:3px solid var(--rule)}
-.masthead .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding-top:26px;padding-bottom:22px}
-.wordmark{text-decoration:none;display:block}
-.wordmark .n1{font-size:clamp(1.35rem,3.4vw,1.9rem);font-weight:900;letter-spacing:-.03em;text-transform:uppercase;line-height:.92;display:block}
-.wordmark .n2{font-family:"IBM Plex Mono",monospace;font-size:.66rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--steel);display:block;margin-top:7px}
-.mast-tel{text-align:right;text-decoration:none;flex-shrink:0}
-.mast-tel .lbl{font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);display:block}
-.mast-tel .num{font-family:"IBM Plex Mono",monospace;font-size:1.12rem;font-weight:600;letter-spacing:-.02em;display:block;margin-top:3px;border-bottom:2px solid var(--stamp)}
-@media(max-width:700px){.mast-tel{display:none}}
+/* ---------- questions ---------- */
+.q { padding-block: var(--section-gap-s); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.q:last-of-type { border-bottom: 0; }
+.q > .container > h2 { max-width: 22ch; }
+.answer { margin-top: var(--space-lg); max-width: 62ch; font-size: var(--text-lead); line-height: 1.5; }
+.answer + .answer { margin-top: var(--space-md); }
 
-/* ============ hero ============ */
-.hero{padding:68px 0 0;border-bottom:3px solid var(--rule)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:54px;align-items:start}
-@media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:40px}}
-.hero h1{font-size:clamp(2.6rem,7.6vw,5.6rem);font-weight:900;letter-spacing:-.04em;line-height:.92}
-.hero h1 .thin{font-weight:400;letter-spacing:-.03em}
-.hero h1 .rule-through{
-  display:inline-block;position:relative;
-}
-.hero h1 .rule-through::after{
-  content:"";position:absolute;left:-2%;right:-2%;top:54%;height:7px;background:var(--stamp);
-  transform:rotate(-1.4deg);
-}
-.hero .lede{font-size:1.14rem;max-width:46ch;margin:34px 0 0;color:var(--ink-soft);line-height:1.62}
-.hero .lede b{font-weight:700;color:var(--ink)}
+/* ---------- box score: the signature ---------- */
+.score { margin-top: var(--space-xl); border-block: var(--rule-hair) solid var(--color-rule-2); padding-block: var(--space-lg); }
+.score-figure { font-family: var(--font-display); font-weight: var(--display-weight); font-size: var(--text-display); line-height: 1; letter-spacing: var(--tracking-display); font-variant-numeric: tabular-nums; }
+.score-line { font-size: var(--text-lead); margin-top: var(--space-xs); max-width: 48ch; }
 
-/* stamp */
-.stamp{
-  border:3px solid var(--stamp);color:var(--stamp);padding:16px 20px 14px;
-  transform:rotate(-3.2deg);max-width:290px;
-  font-family:"IBM Plex Mono",monospace;text-align:center;
-  box-shadow:inset 0 0 0 1px var(--stamp);
-}
-.stamp .big{display:block;font-size:clamp(1.5rem,4.4vw,2.05rem);font-weight:600;letter-spacing:.04em;line-height:1}
-.stamp .sm{display:block;font-size:.6rem;letter-spacing:.24em;margin-top:9px;padding-top:9px;border-top:1.5px solid var(--stamp)}
-@media(max-width:940px){.stamp{margin:0 auto}}
+/* ---------- ruled listings ---------- */
+.listing { list-style: none; margin: var(--space-xl) 0 0; padding: 0; }
+.listing li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-lg); align-items: baseline; padding-block: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); }
+.listing li:last-child { border-bottom: var(--rule-hair) solid var(--color-rule); }
+.listing .item { font: var(--display-weight) var(--text-title)/1.2 var(--font-display); letter-spacing: var(--tracking-display); }
+.listing .note { display: block; font-family: var(--font-body); font-weight: 400; font-size: var(--text-md); line-height: 1.5; letter-spacing: 0; margin-top: var(--space-2xs); color: var(--color-ink-2); max-width: 56ch; }
+.agate { font: 500 var(--text-md)/1 var(--font-outlier); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 
-.hero-cta{display:flex;flex-wrap:wrap;gap:0;margin:46px 0 0;border-top:3px solid var(--rule);border-bottom:3px solid var(--rule)}
-.hero-cta a{
-  flex:1 1 auto;min-width:210px;text-decoration:none;padding:24px 26px;
-  display:flex;flex-direction:column;justify-content:center;
-}
-.hero-cta a + a{border-left:1.5px solid var(--rule)}
-@media(max-width:700px){.hero-cta a + a{border-left:0;border-top:1.5px solid var(--rule)}}
-.hero-cta .k{font-family:"IBM Plex Mono",monospace;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel)}
-.hero-cta .v{font-size:1.3rem;font-weight:800;letter-spacing:-.025em;text-transform:uppercase;margin-top:5px}
-.hero-cta .call{background:var(--ink);color:var(--paper)}
-.hero-cta .call .k{color:#9AA3B0}
-.hero-cta .text{background:var(--stamp);color:var(--paper-hi)}
-.hero-cta .text .k{color:#F0C9C2}
-.hero-cta .price{background:transparent}
-.hero-cta a:hover{filter:brightness(1.12)}
-.hero-cta .price:hover{background:var(--paper-lo);filter:none}
+/* ---------- prices: figures lead ---------- */
+.prices { margin: var(--space-xl) 0 0; }
+.price-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-lg); align-items: baseline; padding-block: var(--space-lg); border-top: var(--rule-hair) solid var(--color-rule); }
+.price-row:last-of-type { border-bottom: var(--rule-hair) solid var(--color-rule); }
+.price-name { font: var(--display-weight) var(--text-xl)/1.1 var(--font-display); letter-spacing: var(--tracking-display); }
+.price-what { font-size: var(--text-md); line-height: 1.5; margin-top: var(--space-2xs); max-width: 58ch; color: var(--color-ink-2); }
+.price-fig { font: 700 var(--text-3xl)/1 var(--font-outlier); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.price-per { display: block; font-family: var(--font-body); font-weight: 500; font-size: var(--text-sm); color: var(--color-muted); margin-top: var(--space-2xs); }
+.price-start { margin-top: var(--space-md); font-size: var(--text-md); }
+.price-start a { color: var(--color-accent); text-decoration-color: var(--color-accent); }
+.price-start a:hover { text-decoration-thickness: 2px; }
 
-/* ============ section scaffolding ============ */
-section{padding:86px 0;border-bottom:3px solid var(--rule)}
-@media(max-width:700px){section{padding:58px 0}}
-.sec-no{
-  font-family:"IBM Plex Mono",monospace;font-size:.66rem;font-weight:600;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--stamp);display:flex;align-items:center;gap:14px;margin-bottom:22px;
-}
-.sec-no::after{content:"";flex:1;height:1.5px;background:var(--rule);opacity:.28}
-.sec-head{max-width:30ch;margin-bottom:46px}
-.sec-head h2{font-size:clamp(1.95rem,5vw,3.35rem)}
-.sec-sub{font-size:1.08rem;color:var(--ink-soft);max-width:60ch;margin:20px 0 0}
-.dark{background:var(--ink);color:var(--paper);border-bottom-color:var(--ink)}
-.dark .sec-sub{color:#A9B2BE}
-.dark .sec-no{color:#E8B4AA}
-.dark .sec-no::after{background:var(--paper);opacity:.25}
+/* ---------- ink band ---------- */
+.band { background: var(--color-ink); color: var(--color-paper); padding-block: var(--section-gap-s); }
+.band h2 { color: var(--color-paper); max-width: 18ch; }
+.band .answer { color: var(--color-paper-2); }
+.band .btn-primary { background: var(--color-paper); color: var(--color-ink); }
+.band .btn-primary:hover { background: var(--color-paper-2); }
+.band .btn-secondary { border-block-color: var(--color-paper); color: var(--color-paper); }
+.band-tel { display: block; margin-top: var(--space-xl); font: 700 var(--text-display-s)/1 var(--font-outlier); font-variant-numeric: tabular-nums; color: var(--color-paper); text-decoration-color: var(--color-paper); text-underline-offset: 0.12em; }
+.band-tel:hover { text-decoration-thickness: 3px; }
+.band-where { margin-top: var(--space-lg); font-size: var(--text-sm); font-weight: 500; color: var(--color-paper-3); }
 
-/* ============ inspection form ============ */
-.form-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:52px;align-items:start}
-@media(max-width:940px){.form-wrap{grid-template-columns:1fr;gap:34px}}
-.formbox{border:2px solid var(--paper);position:relative}
-.formbox .fhead{
-  background:var(--paper);color:var(--ink);font-family:"IBM Plex Mono",monospace;
-  font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:9px 16px;
-  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
-}
-.formrow{display:flex;gap:16px;padding:21px 16px;border-top:1.5px solid #343A43;align-items:flex-start}
-.formrow:first-of-type{border-top:0}
-.box{
-  flex-shrink:0;width:21px;height:21px;border:2px solid var(--stamp);margin-top:3px;
-  display:flex;align-items:center;justify-content:center;
-  font-family:"IBM Plex Mono",monospace;font-size:.85rem;color:var(--stamp);font-weight:600;
-}
-.formrow .txt{font-size:1.03rem;color:#C3CAD4;line-height:1.55}
-.formrow .txt b{color:var(--paper);font-weight:700}
-.fail{
-  font-family:"IBM Plex Mono",monospace;font-size:.6rem;letter-spacing:.18em;color:var(--stamp);
-  border:1.5px solid var(--stamp);padding:3px 7px;white-space:nowrap;margin-left:auto;align-self:center;
-}
-@media(max-width:560px){.fail{display:none}}
-.verdict{margin:34px 0 0;font-size:1.1rem;color:#A9B2BE;max-width:56ch}
+/* ---------- disclosures ---------- */
+.qa { margin-top: var(--space-xl); }
+.qa details { border-top: var(--rule-hair) solid var(--color-rule); }
+.qa details:last-of-type { border-bottom: var(--rule-hair) solid var(--color-rule); }
+.qa summary { cursor: pointer; list-style: none; padding-block: var(--space-lg); font: var(--display-weight) var(--text-title)/1.25 var(--font-display); letter-spacing: var(--tracking-display); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-md); align-items: baseline; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary::after { content: "+"; font-family: var(--font-outlier); font-weight: 500; color: var(--color-accent); }
+.qa details[open] summary::after { content: "\2212"; }
+.qa .answer { padding-bottom: var(--space-lg); margin-top: 0; }
+.qa a { color: var(--color-accent); text-decoration-color: var(--color-accent); }
+.qa a:hover { text-decoration-thickness: 2px; }
 
-/* ============ numbered checklist ============ */
-.tasks{border-top:3px solid var(--rule);counter-reset:t}
-.task{
-  counter-increment:t;display:grid;grid-template-columns:64px minmax(0,1fr);
-  gap:26px;padding:26px 0;border-bottom:1.5px solid rgba(21,23,27,.2);align-items:start;
-}
-@media(max-width:700px){.task{grid-template-columns:44px minmax(0,1fr);gap:16px;padding:20px 0}}
-.task::before{
-  content:counter(t,decimal-leading-zero);
-  font-family:"IBM Plex Mono",monospace;font-size:1.02rem;font-weight:600;color:var(--stamp);padding-top:3px;
-}
-.task h3{font-size:1.28rem;font-weight:800;letter-spacing:-.01em;text-transform:none}
-.task p{margin:9px 0 0;color:var(--ink-soft);font-size:1.02rem;line-height:1.58}
-.task.key h3::after{
-  content:"KEY TEST";font-family:"IBM Plex Mono",monospace;font-size:.56rem;letter-spacing:.18em;
-  color:var(--paper-hi);background:var(--stamp);padding:4px 7px;margin-left:11px;vertical-align:middle;
-  display:inline-block;
+/* ---------- two answers side by side ---------- */
+.pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); margin-top: var(--space-xl); }
+.pair > div > h3 { margin-bottom: var(--space-sm); }
+@media (max-width: 60rem) { .pair { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); } }
+
+/* ---------- footer: statement ---------- */
+.site-foot { border-top: 2px solid var(--color-rule-2); padding-block: var(--space-2xl) var(--space-4xl); }
+.foot-name { font: var(--display-weight) var(--text-xl)/1.1 var(--font-display); letter-spacing: var(--tracking-display); }
+.foot-where { margin-top: var(--space-2xs); font-size: var(--text-md); color: var(--color-muted); }
+.foot-tel { display: inline-block; margin-top: var(--space-md); font: 700 var(--text-lg)/1 var(--font-outlier); font-variant-numeric: tabular-nums; color: var(--color-accent); text-decoration-color: var(--color-accent); }
+.foot-tel:hover { text-decoration-thickness: 2px; }
+.foot-note { margin-top: var(--space-xs); font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
+.disclaimer { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: var(--rule-hair) solid var(--color-rule); font-size: var(--text-sm); color: var(--color-muted); max-width: 76ch; }
+.disclaimer + .disclaimer { margin-top: var(--space-xs); padding-top: 0; border-top: 0; }
+
+/* ---------- standing call bar, small screens ---------- */
+.callbar { position: fixed; inset-inline: 0; bottom: 0; z-index: var(--z-sticky); display: none; border-top: 2px solid var(--color-ink); }
+.callbar div { display: flex; }
+.callbar a { flex: 1 1 50%; text-align: center; padding: var(--space-md) var(--space-xs); text-decoration: none; font: var(--display-weight) var(--text-md)/1 var(--font-display); }
+.callbar .c { background: var(--color-ink); color: var(--color-paper); }
+.callbar .t { background: var(--color-paper-2); color: var(--color-ink); }
+@media (max-width: 40rem) {
+  .callbar { display: block; }
+  .site-foot { padding-bottom: var(--space-4xl); }
+  .hero { min-height: auto; padding-block: var(--space-2xl); }
 }
 
-/* ============ ledger / pricing ============ */
-.ledger{display:grid;grid-template-columns:1fr 1fr;gap:0;border:3px solid var(--rule)}
-@media(max-width:820px){.ledger{grid-template-columns:1fr}}
-.plan{padding:0}
-.plan + .plan{border-left:3px solid var(--rule)}
-@media(max-width:820px){.plan + .plan{border-left:0;border-top:3px solid var(--rule)}}
-.plan.pick{background:var(--paper-hi)}
-.plan-head{padding:26px 28px 22px;border-bottom:1.5px solid rgba(21,23,27,.25)}
-.plan-head .tag{
-  font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--steel);display:block;
-}
-.plan.pick .plan-head .tag{color:var(--stamp);font-weight:600}
-.plan-head h3{font-size:1.75rem;margin-top:8px}
-.amt{display:flex;align-items:baseline;gap:7px;margin-top:16px;font-family:"IBM Plex Mono",monospace}
-.amt .n{font-size:2.9rem;font-weight:600;letter-spacing:-.045em;line-height:1}
-.amt .p{font-size:.88rem;color:var(--steel);letter-spacing:.04em}
-.plan-head .term{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin:12px 0 0}
-.plan ul{list-style:none;margin:0;padding:0}
-.plan li{
-  display:flex;gap:13px;padding:14px 28px;border-bottom:1.5px solid rgba(21,23,27,.12);
-  font-size:1rem;line-height:1.5;
-}
-.plan li::before{
-  content:"+";font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--stamp);flex-shrink:0;
-}
-.plan-foot{padding:24px 28px 28px}
-.plan-foot .go{
-  display:block;text-align:center;text-decoration:none;padding:17px 18px;font-weight:800;
-  font-size:1.05rem;text-transform:uppercase;letter-spacing:.02em;background:var(--ink);color:var(--paper);
-}
-.plan.pick .plan-foot .go{background:var(--stamp)}
-.plan-foot .go:hover{filter:brightness(1.15)}
-.plan-foot .alt{
-  display:block;text-align:center;margin-top:13px;font-family:"IBM Plex Mono",monospace;
-  font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);
-}
-.plan-foot .alt:hover{color:var(--stamp)}
-.prepay{
-  margin-top:0;border:3px solid var(--rule);border-top:0;padding:22px 28px;
-  display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap;
-  background:var(--paper-lo);
-}
-.prepay .l{font-size:1.04rem}
-.prepay .l b{font-weight:800}
-.prepay .r{font-family:"IBM Plex Mono",monospace;font-size:1.5rem;font-weight:600;letter-spacing:-.03em}
-
-/* ============ two-up notes ============ */
-.notes{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:3px solid var(--rule)}
-@media(max-width:820px){.notes{grid-template-columns:1fr}}
-.note{padding:32px 34px 34px}
-.note + .note{border-left:1.5px solid rgba(21,23,27,.25)}
-@media(max-width:820px){.note + .note{border-left:0;border-top:1.5px solid rgba(21,23,27,.25)}}
-.note .k{font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--stamp);font-weight:600}
-.note h3{font-size:1.35rem;margin:13px 0 14px;text-transform:none;font-weight:800;letter-spacing:-.015em}
-.note p{margin:0 0 13px;color:var(--ink-soft);font-size:1.01rem}
-.note p:last-child{margin-bottom:0}
-
-/* ============ faq ============ */
-.qa{border-top:3px solid var(--rule)}
-.qa details{border-bottom:1.5px solid rgba(21,23,27,.2)}
-.qa summary{
-  cursor:pointer;list-style:none;display:grid;grid-template-columns:58px minmax(0,1fr) 34px;
-  gap:14px;align-items:start;padding:25px 0;
-}
-@media(max-width:700px){.qa summary{grid-template-columns:38px minmax(0,1fr) 26px;gap:10px}}
-.qa summary::-webkit-details-marker{display:none}
-.qa .qn{font-family:"IBM Plex Mono",monospace;font-size:.76rem;font-weight:600;color:var(--stamp);padding-top:6px}
-.qa .qt{font-size:1.22rem;font-weight:800;letter-spacing:-.015em;line-height:1.3}
-.qa .sign{font-family:"IBM Plex Mono",monospace;font-size:1.3rem;color:var(--stamp);text-align:right;line-height:1.15}
-.qa details[open] .sign::after{content:"\2212"}
-.qa .sign::after{content:"+"}
-.qa .ans{
-  margin:0;padding:0 34px 28px 72px;color:var(--ink-soft);font-size:1.04rem;max-width:74ch;
-}
-@media(max-width:700px){.qa .ans{padding:0 0 24px 48px}}
-.qa .ans a{font-weight:700;color:var(--stamp);text-decoration:underline;text-underline-offset:3px}
-
-/* ============ contact ============ */
-.contact{background:var(--ink);color:var(--paper);border-bottom:0;padding:84px 0 92px}
-.contact h2{font-size:clamp(2rem,5.6vw,3.9rem);max-width:17ch}
-.contact .sub{color:#A9B2BE;max-width:48ch;margin:24px 0 0;font-size:1.1rem}
-.cbox{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:46px;border:3px solid var(--paper)}
-@media(max-width:700px){.cbox{grid-template-columns:1fr}}
-.cbox a{
-  text-decoration:none;padding:30px 28px;display:block;
-}
-.cbox a + a{border-left:3px solid var(--paper)}
-@media(max-width:700px){.cbox a + a{border-left:0;border-top:3px solid var(--paper)}}
-.cbox .k{font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#9AA3B0}
-.cbox .v{font-family:"IBM Plex Mono",monospace;font-size:clamp(1.3rem,4vw,1.85rem);font-weight:600;letter-spacing:-.035em;margin-top:9px;display:block}
-.cbox .call{background:var(--paper);color:var(--ink)}
-.cbox .call .k{color:var(--steel)}
-.cbox .text{background:var(--stamp);color:var(--paper-hi)}
-.cbox .text .k{color:#F0C9C2}
-.cbox a:hover{filter:brightness(1.12)}
-.contact .fine{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#7C8694;margin:26px 0 0}
-
-/* ============ footer ============ */
-footer{background:var(--ink);color:#8C95A3;padding:0 0 118px;font-size:.93rem;border-top:1.5px solid #2B313A}
-@media(min-width:701px){footer{padding-bottom:50px}}
-footer .wrap{padding-top:40px}
-.fgrid{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between}
-.fgrid .fn{font-weight:900;text-transform:uppercase;color:var(--paper);font-size:1.05rem;letter-spacing:-.02em;margin:0 0 7px}
-footer a{color:var(--paper);text-decoration:none;font-weight:600}
-footer a:hover{text-decoration:underline}
-.disc{margin:30px 0 0;font-size:.8rem;color:#646E7C;max-width:76ch;line-height:1.62}
-
-/* ============ sticky mobile bar ============ */
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;border-top:3px solid var(--ink)}
-.bar .split{display:flex}
-.bar a{
-  flex:1 1 50%;text-align:center;padding:16px 8px;text-decoration:none;
-  font-weight:800;font-size:1.04rem;text-transform:uppercase;letter-spacing:.02em;
-}
-.bar .c{background:var(--paper-hi);color:var(--ink)}
-.bar .t{background:var(--stamp);color:var(--paper-hi)}
-@media(max-width:700px){.bar{display:block}}
-
-.skip{position:absolute;left:-9999px}
-.skip:focus{left:16px;top:16px;z-index:99;background:var(--stamp);color:var(--paper-hi);padding:12px 18px;font-weight:700}
-:focus-visible{outline:3px solid var(--stamp);outline-offset:3px}
+.skip { position: absolute; left: -9999px; }
+.skip:focus-visible { left: var(--space-md); top: var(--space-md); z-index: var(--z-modal); background: var(--color-ink); color: var(--color-paper); padding: var(--space-sm) var(--space-md); }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="docstrip">
-  <div class="wrap">
-    <span>Service Record &mdash; Residential Air-Cooled Standby</span>
-    <span>Middletown NJ 07748 &middot; <b>Monmouth County</b></span>
-  </div>
-</div>
-
 <header class="masthead">
-  <div class="wrap">
-    <a class="wordmark" href="./">
-      <span class="n1">Middletown<br>Generator Service</span>
-      <span class="n2">Maintenance &middot; Testing &middot; Repair</span>
-    </a>
-    <a class="mast-tel" href="tel:+19084769612">
-      <span class="lbl">Call or text</span>
-      <span class="num">(908) 476-9612</span>
-    </a>
+  <div class="container">
+    <a class="masthead-name" href="./">Middletown Generator Service</a>
+    <span class="masthead-line">Maintenance, testing and repair</span>
+    <a class="masthead-tel" href="tel:+19084769612">(908) 476-9612</a>
   </div>
 </header>
 
 <main id="main">
 
 <section class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
+  <div class="container">
+    <p class="dateline">Middletown, New Jersey</p>
+    <h1>Your generator starts every week.</h1>
+    <p class="lead">That does not mean it will run your house.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="tel:+19084769612">Call (908) 476-9612</a>
+      <a class="btn btn-secondary" href="sms:+19084769612?&amp;body=Generator%20service%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">Send a text instead</a>
+    </div>
+  </div>
+</section>
+
+<section class="q">
+  <div class="container">
+    <h2>Does the weekly self&#8209;test actually test anything?</h2>
+    <p class="answer">It proves the engine can idle. That is all it proves.</p>
+    <div class="score">
+      <p class="score-figure">Twelve minutes</p>
+      <p class="score-line">Your generator runs for about twelve minutes once a week, with no load on it, and shuts off.</p>
+    </div>
+    <ul class="listing">
+      <li><span class="item">The transfer switch<span class="note">The self&#8209;test never asks it to pick up your house.</span></span><span class="agate">not tested</span></li>
+      <li><span class="item">The battery under load<span class="note">A battery can read full voltage and still fail the moment it is asked to crank.</span></span><span class="agate">not tested</span></li>
+      <li><span class="item">The oil<span class="note">Four years old runs as quietly as new oil, right up until it does not.</span></span><span class="agate">not tested</span></li>
+      <li><span class="item">The wiring<span class="note">Mice get into an enclosure over the winter. An idle test will not find them.</span></span><span class="agate">not tested</span></li>
+    </ul>
+    <p class="answer">Most no&#8209;starts get discovered during the outage. That is the worst possible time to find out, and the hardest time to get parts or a technician.</p>
+  </div>
+</section>
+
+<section class="q">
+  <div class="container">
+    <h2>What happens on a service visit?</h2>
+    <p class="answer">Work follows the manufacturer&#8217;s schedule for your model. You get a written record of everything performed, and a written estimate before any repair. Never a verbal number.</p>
+    <ul class="listing">
+      <li><span class="item">A simulated power failure<span class="note">Your house gets put on generator power while I am standing there. It is the test that matters and the one almost nobody runs.</span></span><span class="agate">every visit</span></li>
+      <li><span class="item">Battery load test<span class="note">Not a voltage reading. Voltage lies on a battery about to fail.</span></span><span class="agate">every visit</span></li>
+      <li><span class="item">Oil, filters and plugs<span class="note">Oil and oil filter, air filter and spark plugs at the interval for your model. Valve clearance when it comes due.</span></span><span class="agate">every visit</span></li>
+      <li><span class="item">Fuel and wiring<span class="note">Fuel pressure, fuel lines and connections, grounding and conduit condition.</span></span><span class="agate">every visit</span></li>
+      <li><span class="item">Enclosure inspection<span class="note">Rodent damage, rust, corrosion and water intrusion. Winter is hard on an outdoor enclosure and the damage is rarely visible from the driveway.</span></span><span class="agate">every visit</span></li>
+      <li><span class="item">Controller and run hours<span class="note">Model, serial and install year recorded. Run hours and the fault log read off the controller, and the exercise schedule confirmed.</span></span><span class="agate">every visit</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="q" id="membership">
+  <div class="container">
+    <h2>What does it cost?</h2>
+    <p class="answer">For residential air&#8209;cooled standby generators. Twelve&#8209;month term, billed monthly. Your first visit is scheduled within 60 to 90 days of signing up.</p>
+    <div class="prices">
+      <div class="price-row">
+        <div>
+          <p class="price-name">Basic</p>
+          <p class="price-what">Annual service on the manufacturer&#8217;s schedule, the full checklist above including the battery load test and the simulated power failure, a written record after every visit and a written estimate before any repair.</p>
+          <p class="price-start"><a href="sms:+19084769612?&amp;body=Generator%20service%20-%20Basic%20plan%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">Text to start on Basic</a></p>
+        </div>
+        <p class="price-fig">$29<span class="price-per">a month</span></p>
+      </div>
+      <div class="price-row">
+        <div>
+          <p class="price-name">Priority</p>
+          <p class="price-what">Everything in Basic, plus a spring pre&#8209;storm check before storm season (battery load test, transfer switch test and visual inspection), priority scheduling during outages, no trip charge on service calls and 10% off parts.</p>
+          <p class="price-start"><a href="sms:+19084769612?&amp;body=Generator%20service%20-%20Priority%20plan%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">Text to start on Priority</a></p>
+        </div>
+        <p class="price-fig">$39<span class="price-per">a month</span></p>
+      </div>
+      <div class="price-row">
+        <div>
+          <p class="price-name">Priority, paid yearly</p>
+          <p class="price-what">The same Priority coverage, paid up front for the year, for anyone who would rather not run a subscription.</p>
+        </div>
+        <p class="price-fig">$399<span class="price-per">a year</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="q">
+  <div class="container">
+    <h2>Where do you work, and what will you turn down?</h2>
+    <div class="pair">
       <div>
-        <h1>Your generator starts <span class="rule-through">every week.</span><br><span class="thin">That doesn't mean it will run your house.</span></h1>
-        <p class="lede">The weekly self-test runs your generator for about twelve minutes, then shuts it off. <b>That proves it can idle.</b> It does not prove it can carry your house when the power actually goes out.</p>
+        <h3>Middletown first</h3>
+        <p class="answer">Middletown 07748 is home base and the core of the route. Surrounding Monmouth County towns are served as the schedule allows. Memberships are capped at what one truck can genuinely service: honest capacity beats a promise that breaks the week you need it.</p>
+        <p class="answer">If you are outside Middletown, call or text and ask. It is a straight answer either way, and I would rather tell you no than miss an appointment.</p>
       </div>
-      <div class="stamp">
-        <span class="big">NOT TESTED</span>
-        <span class="sm">Transfer switch &middot; Battery under load</span>
-      </div>
-    </div>
-    <div class="hero-cta">
-      <a class="call" href="tel:+19084769612">
-        <span class="k">Call</span><span class="v">(908) 476-9612</span>
-      </a>
-      <a class="text" href="sms:+19084769612?&amp;body=Generator%20service%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">
-        <span class="k">Or send a text</span><span class="v">Text instead</span>
-      </a>
-      <a class="price" href="#membership">
-        <span class="k">Memberships from</span><span class="v">$29 / month</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="dark">
-  <div class="wrap">
-    <p class="sec-no">&sect; 01 &mdash; What the self-test misses</p>
-    <div class="form-wrap">
       <div>
-        <h2 style="font-size:clamp(1.9rem,4.6vw,3rem)">Twelve minutes of idling is not a test of anything that fails.</h2>
-        <p class="verdict">Most no-starts get discovered during the outage &mdash; the worst possible time to find out, and the hardest time to get parts or a technician.</p>
-      </div>
-      <div class="formbox">
-        <div class="fhead"><span>Weekly self-test &mdash; coverage</span><span>4 items</span></div>
-        <div class="formrow">
-          <span class="box">&nbsp;</span>
-          <span class="txt">Does not prove the <b>transfer switch</b> will actually pick up your house.</span>
-          <span class="fail">Not checked</span>
-        </div>
-        <div class="formrow">
-          <span class="box">&nbsp;</span>
-          <span class="txt">Does not prove the <b>battery</b> can crank under load. A battery can read full voltage and still fail the moment it's asked to work.</span>
-          <span class="fail">Not checked</span>
-        </div>
-        <div class="formrow">
-          <span class="box">&nbsp;</span>
-          <span class="txt">Does not prove the <b>oil</b> isn't four years old.</span>
-          <span class="fail">Not checked</span>
-        </div>
-        <div class="formrow">
-          <span class="box">&nbsp;</span>
-          <span class="txt">Does not prove <b>mice</b> haven't been in the wiring over the winter.</span>
-          <span class="fail">Not checked</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="sec-no">&sect; 02 &mdash; The annual service visit</p>
-    <div class="sec-head"><h2>What actually gets done</h2></div>
-    <p class="sec-sub" style="margin:-28px 0 40px">Work follows the manufacturer's schedule for your specific model. You get a written record of everything performed, and a written estimate before any repair &mdash; never a verbal number.</p>
-    <div class="tasks">
-      <div class="task key">
-        <div>
-          <h3>A simulated power failure</h3>
-          <p>Your house gets put on generator power while I'm standing there. This is the test that matters, and it's the one almost nobody runs. A generator that passes its weekly self-test has only proven it can idle.</p>
-        </div>
-      </div>
-      <div class="task key">
-        <div>
-          <h3>Battery load test</h3>
-          <p>Not a voltage reading. Voltage lies on a battery about to fail &mdash; it will show full charge right up until the moment it's asked to crank an engine.</p>
-        </div>
-      </div>
-      <div class="task">
-        <div>
-          <h3>Oil, filters and plugs</h3>
-          <p>Oil and oil filter, air filter, and spark plugs at the manufacturer's interval for your model. Valve clearance checked when it comes due.</p>
-        </div>
-      </div>
-      <div class="task">
-        <div>
-          <h3>Fuel and wiring</h3>
-          <p>Fuel pressure reading, fuel lines and connections, plus grounding and conduit condition.</p>
-        </div>
-      </div>
-      <div class="task">
-        <div>
-          <h3>Enclosure inspection</h3>
-          <p>Rodent damage, rust, corrosion and water intrusion. Winter is hard on an outdoor enclosure, and the damage is rarely visible from the driveway.</p>
-        </div>
-      </div>
-      <div class="task">
-        <div>
-          <h3>Controller and run hours</h3>
-          <p>Model, serial and install year recorded. Run hours and the fault log read off the controller, and the exercise schedule confirmed to still be running.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="membership">
-  <div class="wrap">
-    <p class="sec-no">&sect; 03 &mdash; Membership</p>
-    <div class="sec-head"><h2>Two ways to keep it covered</h2></div>
-    <p class="sec-sub" style="margin:-28px 0 40px">For residential air-cooled standby generators. Twelve-month term, billed monthly. Your first service visit is scheduled within 60 to 90 days of signing up.</p>
-    <div class="ledger">
-      <div class="plan">
-        <div class="plan-head">
-          <span class="tag">Plan A</span>
-          <h3>Basic</h3>
-          <div class="amt"><span class="n">$29</span><span class="p">/ month</span></div>
-          <p class="term">12-month term</p>
-        </div>
-        <ul>
-          <li>Annual service per the manufacturer's schedule for your model</li>
-          <li>The full checklist above, including the battery load test and simulated power failure</li>
-          <li>Written record of work after every visit</li>
-          <li>Written estimate before any repair</li>
-        </ul>
-        <div class="plan-foot">
-          <a class="go" href="tel:+19084769612">Call to start</a>
-          <a class="alt" href="sms:+19084769612?&amp;body=Generator%20service%20-%20Basic%20plan%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">or send a text &rarr;</a>
-        </div>
-      </div>
-      <div class="plan pick">
-        <div class="plan-head">
-          <span class="tag">Plan B &mdash; most members choose this</span>
-          <h3>Priority</h3>
-          <div class="amt"><span class="n">$39</span><span class="p">/ month</span></div>
-          <p class="term">12-month term</p>
-        </div>
-        <ul>
-          <li>Everything in Basic</li>
-          <li><strong>Spring pre-storm check</strong> before storm season &mdash; battery load test, transfer switch test and visual inspection</li>
-          <li><strong>Priority scheduling</strong> during outages</li>
-          <li><strong>No trip charge</strong> on service calls</li>
-          <li>10% off parts</li>
-        </ul>
-        <div class="plan-foot">
-          <a class="go" href="tel:+19084769612">Call to start</a>
-          <a class="alt" href="sms:+19084769612?&amp;body=Generator%20service%20-%20Priority%20plan%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">or send a text &rarr;</a>
-        </div>
-      </div>
-    </div>
-    <div class="prepay">
-      <span class="l"><b>Rather not do a subscription?</b> Priority, paid up front for the year.</span>
-      <span class="r">$399 / yr</span>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="sec-no">&sect; 04 &mdash; Service area</p>
-    <div class="sec-head"><h2>Middletown first, Monmouth County around it</h2></div>
-    <p class="sec-sub" style="margin:-28px 0 40px">Memberships are capped at what one truck can genuinely service. That's deliberate &mdash; honest capacity beats a promise that breaks the week you need it.</p>
-    <div class="notes">
-      <div class="note">
-        <span class="k">Where I work</span>
-        <h3>Middletown, NJ 07748</h3>
-        <p>Home base and the core of the route. Surrounding Monmouth County towns are served as the schedule allows.</p>
-        <p>If you're outside Middletown, call or text and ask &mdash; it's a straight answer either way, and I'd rather tell you no than miss an appointment.</p>
-      </div>
-      <div class="note">
-        <span class="k">What I don't do</span>
         <h3>No sales, no installs</h3>
-        <p>I don't sell or install generators, and I don't install or modify transfer switches. This is maintenance, testing and repair on standby generators that are already in the ground.</p>
-        <p>If what you need is an install, say so when you call and I'll tell you straight rather than take the appointment.</p>
+        <p class="answer">I do not sell or install generators, and I do not install or modify transfer switches. This is maintenance, testing and repair on standby generators that are already in the ground.</p>
+        <p class="answer">If what you need is an install, say so when you call and I will tell you straight rather than take the appointment.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <p class="sec-no">&sect; 05 &mdash; Questions</p>
-    <div class="sec-head"><h2>Straight answers</h2></div>
+<section class="q">
+  <div class="container">
+    <h2>What else do people ask?</h2>
     <div class="qa">
       <details open>
-        <summary><span class="qn">Q1</span><span class="qt">My generator runs its test every week and sounds fine. Why do I need this?</span><span class="sign"></span></summary>
-        <p class="ans">Because the weekly self-test only proves the engine can idle for twelve minutes with no load on it. It never engages the transfer switch, never asks the battery to crank under real demand, and never puts your house on generator power. Those are the three things that actually fail, and the self-test checks none of them.</p>
+        <summary><span>What is the difference between the $29 and $39 plans?</span></summary>
+        <p class="answer">Both get the same thorough annual service. Priority adds a second visit, a spring pre&#8209;storm check before storm season, plus priority scheduling during outages, no trip charge on service calls and 10% off parts. Most people take Priority because the spring check is what catches a dead battery before July rather than during an outage.</p>
       </details>
       <details>
-        <summary><span class="qn">Q2</span><span class="qt">What's the difference between the $29 and $39 plans?</span><span class="sign"></span></summary>
-        <p class="ans">Both get the same thorough annual service. Priority adds a second visit &mdash; a spring pre-storm check before storm season &mdash; plus priority scheduling during outages, no trip charge on service calls, and 10% off parts. Most people take Priority because the spring check is what catches a dead battery before July rather than during an outage.</p>
+        <summary><span>How fast will you get here when the power goes out?</span></summary>
+        <p class="answer">I will not give you a number, and you should be skeptical of anyone who does. After a storm that takes out the county, nobody can reach every customer quickly. That is physics, not effort. What Priority members get is priority scheduling: members go ahead of non&#8209;members in the queue. The honest answer is that the real protection is the service visit beforehand, not the response afterward.</p>
       </details>
       <details>
-        <summary><span class="qn">Q3</span><span class="qt">How fast will you get here when the power goes out?</span><span class="sign"></span></summary>
-        <p class="ans">I won't give you a number, and you should be skeptical of anyone who does. After a storm that takes out the county, nobody can reach every customer quickly &mdash; that's physics, not effort. What Priority members get is <strong>priority scheduling</strong>: members go ahead of non-members in the queue. The honest answer is that the real protection is the service visit beforehand, not the response afterward.</p>
+        <summary><span>Will you service my brand of generator?</span></summary>
+        <p class="answer">I service residential air&#8209;cooled standby generators from the major manufacturers. Tell me the make and model when you call and I will tell you honestly whether it is something I work on.</p>
       </details>
       <details>
-        <summary><span class="qn">Q4</span><span class="qt">Will you service my brand of generator?</span><span class="sign"></span></summary>
-        <p class="ans">I service residential air-cooled standby generators from the major manufacturers. Tell me the make and model when you call and I'll tell you honestly whether it's something I work on.</p>
+        <summary><span>What happens if you find something broken?</span></summary>
+        <p class="answer">You get a written estimate before any work beyond routine service happens. Never a verbal number, and never a repair you did not approve. If you would rather take that estimate somewhere else, that is completely fine.</p>
       </details>
       <details>
-        <summary><span class="qn">Q5</span><span class="qt">What happens if you find something broken?</span><span class="sign"></span></summary>
-        <p class="ans">You get a written estimate before any work beyond routine service happens &mdash; never a verbal number, and never a repair you didn't approve. If you'd rather take that estimate somewhere else, that's completely fine.</p>
+        <summary><span>When does my first visit happen?</span></summary>
+        <p class="answer">Within 60 to 90 days of signing up. Service is scheduled, not emergency&#8209;driven, which is what keeps the route tight and the price where it is.</p>
       </details>
       <details>
-        <summary><span class="qn">Q6</span><span class="qt">When does my first visit happen?</span><span class="sign"></span></summary>
-        <p class="ans">Within 60 to 90 days of signing up. Service is scheduled, not emergency-driven, which is what keeps the route tight and the price where it is.</p>
-      </details>
-      <details>
-        <summary><span class="qn">Q7</span><span class="qt">How do I sign up?</span><span class="sign"></span></summary>
-        <p class="ans"><a href="tel:+19084769612">Call (908) 476-9612</a>, or <a href="sms:+19084769612?&amp;body=Generator%20service%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">send a text</a>. Text is genuinely fine &mdash; often faster, since I'm on a job most of the day. Tell me your town and the make and model of your generator if you know it.</p>
+        <summary><span>How do I sign up?</span></summary>
+        <p class="answer"><a href="tel:+19084769612">Call (908) 476-9612</a>, or <a href="sms:+19084769612?&amp;body=Generator%20service%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">send a text</a>. Text is genuinely fine, often faster, since I am on a job most of the day. Tell me your town and the make and model of your generator if you know it.</p>
       </details>
     </div>
   </div>
 </section>
 
-<section class="contact">
-  <div class="wrap">
-    <p class="sec-no">&sect; 06 &mdash; Get on the schedule</p>
+<section class="band">
+  <div class="container">
     <h2>Find out before the storm does.</h2>
-    <p class="sub">Tell me your town and the make and model of your unit. Text is fine &mdash; often faster.</p>
-    <div class="cbox">
-      <a class="call" href="tel:+19084769612"><span class="k">Call</span><span class="v">(908) 476-9612</span></a>
-      <a class="text" href="sms:+19084769612?&amp;body=Generator%20service%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20"><span class="k">Text</span><span class="v">(908) 476-9612</span></a>
+    <p class="answer">Tell me your town and the make and model of your unit. Text is fine, often faster.</p>
+    <a class="band-tel" href="tel:+19084769612">(908) 476-9612</a>
+    <div class="actions">
+      <a class="btn btn-primary" href="tel:+19084769612">Call now</a>
+      <a class="btn btn-secondary" href="sms:+19084769612?&amp;body=Generator%20service%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">Send a text</a>
     </div>
-    <p class="fine">Middletown, NJ &middot; Serving Monmouth County</p>
+    <p class="band-where">Middletown, New Jersey. Serving Monmouth County.</p>
   </div>
 </section>
 
 </main>
 
-<footer>
-  <div class="wrap">
-    <div class="fgrid">
-      <div>
-        <p class="fn">Middletown Generator Service</p>
-        <p style="margin:0">Middletown, NJ &middot; Serving Monmouth County</p>
-      </div>
-      <div>
-        <p style="margin:0 0 4px"><a href="tel:+19084769612">(908) 476-9612</a></p>
-        <p style="margin:0" class="mono" >Call or text</p>
-      </div>
-    </div>
-    <p class="disc">Standby generator maintenance, testing and repair for residential air-cooled units. Generator sales, generator installation and transfer switch installation are not offered. Manufacturer brand names, where mentioned, are the property of their owners and do not indicate any affiliation, authorization or warranty relationship.</p>
-    <p class="disc">&copy; 2026 Middletown Generator Service.</p>
+<footer class="site-foot">
+  <div class="container">
+    <p class="foot-name">Middletown Generator Service</p>
+    <p class="foot-where">Middletown, New Jersey. Serving Monmouth County.</p>
+    <a class="foot-tel" href="tel:+19084769612">(908) 476-9612</a>
+    <p class="foot-note">Call or text.</p>
+    <p class="disclaimer">Standby generator maintenance, testing and repair for residential air-cooled units. Generator sales, generator installation and transfer switch installation are not offered. Manufacturer brand names, where mentioned, are the property of their owners and do not indicate any affiliation, authorization or warranty relationship.</p>
+    <p class="disclaimer">&copy; 2026 Middletown Generator Service.</p>
   </div>
 </footer>
 
-<div class="bar"><div class="split">
+<div class="callbar"><div>
   <a class="c" href="tel:+19084769612">Call</a>
   <a class="t" href="sms:+19084769612?&amp;body=Generator%20service%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">Text</a>
 </div></div>
@@ -650,12 +383,12 @@ footer a:hover{text-decoration:underline}
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "My generator runs its test every week and sounds fine. Why do I need this?",
+          "name": "Does the weekly self-test actually test anything?",
           "acceptedAnswer": { "@type": "Answer", "text": "The weekly self-test only proves the engine can idle for about twelve minutes with no load on it. It never engages the transfer switch, never asks the battery to crank under real demand, and never puts the house on generator power. Those are the three things that actually fail." }
         },
         {
           "@type": "Question",
-          "name": "What's the difference between the $29 and $39 plans?",
+          "name": "What is the difference between the $29 and $39 plans?",
           "acceptedAnswer": { "@type": "Answer", "text": "Both include the same annual service. Priority adds a spring pre-storm check before storm season, priority scheduling during outages, no trip charge on service calls, and 10% off parts." }
         },
         {
