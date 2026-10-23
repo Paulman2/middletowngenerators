@@ -3,49 +3,52 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found — Middletown Generator Service</title>
+<title>Page not found: Middletown Generator Service</title>
+<meta name="description" content="That page is not here. Everything about standby generator service and membership in Middletown and Monmouth County, NJ is on the main page.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&amp;family=Spectral:wght@400;500&amp;family=Libre+Franklin:wght@700&amp;display=swap" rel="stylesheet">
 <style>
-:root{--paper:#E9E3D6;--paper-hi:#F4F0E7;--ink:#15171B;--ink-soft:#3A3F47;--steel:#5A6472;--stamp:#B23A2B}
-*{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:flex;align-items:center;background:var(--paper);
-  color:var(--ink);font-family:Archivo,sans-serif;font-size:19px;line-height:1.6;padding:40px 24px}
-body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.42;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
-.wrap{position:relative;z-index:2;max-width:620px;margin:0 auto}
-.code{font-family:"IBM Plex Mono",monospace;font-size:.66rem;font-weight:600;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--stamp);display:flex;align-items:center;gap:14px;margin-bottom:20px}
-.code::after{content:"";flex:1;height:1.5px;background:var(--ink);opacity:.28}
-h1{margin:0 0 18px;font-size:clamp(2.1rem,7vw,3.4rem);font-weight:900;text-transform:uppercase;
-  letter-spacing:-.035em;line-height:.95}
-p{color:var(--ink-soft);margin:0 0 34px;max-width:46ch}
-.acts{display:flex;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);flex-wrap:wrap}
-.acts a{flex:1 1 auto;min-width:180px;text-decoration:none;padding:21px 24px;display:block}
-.acts a + a{border-left:1.5px solid var(--ink)}
-@media(max-width:560px){.acts a + a{border-left:0;border-top:1.5px solid var(--ink)}}
-.acts .k{font-family:"IBM Plex Mono",monospace;font-size:.6rem;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--steel);display:block}
-.acts .v{font-size:1.2rem;font-weight:800;text-transform:uppercase;letter-spacing:-.02em;
-  margin-top:5px;display:block}
-.acts .home{background:var(--ink);color:var(--paper)}
-.acts .home .k{color:#9AA3B0}
-.acts .call{background:var(--stamp);color:var(--paper-hi)}
-.acts .call .k{color:#F0C9C2}
-:focus-visible{outline:3px solid var(--stamp);outline-offset:3px}
+/* Hallmark · shape: Letter · genre: editorial · theme: Newsprint (deal 3/3, seed prompt-da39·68b67dc3·2026-10-23·r0) · redesign: full
+ * hero: Settled · nav: none · footer: none · imagery: none · signature: the page states the one fact and hands back the phone number
+ * axes: light/slab-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H5 E5 S4 R5 V4 · weakest: P, a not-found page has no argument to make; kept it to one fact and one way back */
+@import url("./tokens.css");
+@import url("./base.css");
+
+body { min-height: 100dvh; display: flex; align-items: center; padding-block: var(--space-2xl); }
+.wrap { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+.dateline { font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); margin-bottom: var(--space-lg); }
+h1 { font-size: var(--text-display-s); max-width: 16ch; }
+.lead { margin-top: var(--space-lg); }
+.rule { margin-top: var(--space-xl); border-block: var(--rule-hair) solid var(--color-rule-2); height: 2px; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-xl); }
+.btn { display: inline-block; text-decoration: none; border-radius: 0; padding: var(--space-md) var(--space-lg); font: var(--display-weight) var(--text-md)/1 var(--font-display); }
+.btn-primary { background: var(--color-ink); color: var(--color-paper); }
+.btn-primary:hover { background: var(--color-ink-2); }
+.btn-primary:active { background: var(--color-accent); color: var(--color-accent-ink); }
+.btn-secondary { border-block: var(--rule-hair) solid var(--color-ink); color: var(--color-ink); }
+.btn-secondary:hover { border-block-width: 2px; }
+.btn-secondary:active { background: var(--color-paper-2); }
+.tel { display: inline-block; margin-top: var(--space-xl); font: 700 var(--text-xl)/1 var(--font-outlier); font-variant-numeric: tabular-nums; color: var(--color-accent); text-decoration-color: var(--color-accent); }
+.tel:hover { text-decoration-thickness: 2px; }
+.tel:active { text-decoration-thickness: 3px; }
+.note { margin-top: var(--space-2xs); font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <p class="code">Error 404 &mdash; Record not found</p>
-  <h1>That page isn't here.</h1>
-  <p>The link may be old or mistyped. Everything about generator service and membership is on the main page.</p>
-  <div class="acts">
-    <a class="home" href="./"><span class="k">Go to</span><span class="v">Main page</span></a>
-    <a class="call" href="tel:+19084769612"><span class="k">Or call or text</span><span class="v">(908) 476-9612</span></a>
+  <p class="dateline">Middletown, New Jersey</p>
+  <h1>That page is not here.</h1>
+  <p class="lead">The link may be old or mistyped. Everything about generator service and membership is on the main page.</p>
+  <div class="rule"></div>
+  <div class="actions">
+    <a class="btn btn-primary" href="./">Go to the main page</a>
+    <a class="btn btn-secondary" href="sms:+19084769612?&amp;body=Generator%20service%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">Send a text instead</a>
   </div>
+  <a class="tel" href="tel:+19084769612">(908) 476-9612</a>
+  <p class="note">Call or text.</p>
 </div>
 </body>
 </html>
