@@ -7,24 +7,45 @@
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
-  background:#0E1116;color:#F5F1EA;font-family:Inter,-apple-system,sans-serif;font-size:19px;
-  line-height:1.65;text-align:center;padding:40px 24px}
-h1{font-family:Fraunces,Georgia,serif;font-size:clamp(2rem,6vw,3.2rem);margin:0 0 18px;letter-spacing:-.02em}
-p{color:#C8D0DA;max-width:46ch;margin:0 auto 32px}
-a.btn{display:inline-block;background:#E8A33D;color:#0E1116;font-weight:700;
-  padding:16px 28px;border-radius:3px;text-decoration:none}
-a.tel{display:block;margin-top:24px;color:#E8A33D;font-weight:600;text-decoration:none}
+:root{--paper:#E9E3D6;--paper-hi:#F4F0E7;--ink:#15171B;--ink-soft:#3A3F47;--steel:#5A6472;--stamp:#B23A2B}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;background:var(--paper);
+  color:var(--ink);font-family:Archivo,sans-serif;font-size:19px;line-height:1.6;padding:40px 24px}
+body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.42;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+.wrap{position:relative;z-index:2;max-width:620px;margin:0 auto}
+.code{font-family:"IBM Plex Mono",monospace;font-size:.66rem;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--stamp);display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.code::after{content:"";flex:1;height:1.5px;background:var(--ink);opacity:.28}
+h1{margin:0 0 18px;font-size:clamp(2.1rem,7vw,3.4rem);font-weight:900;text-transform:uppercase;
+  letter-spacing:-.035em;line-height:.95}
+p{color:var(--ink-soft);margin:0 0 34px;max-width:46ch}
+.acts{display:flex;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);flex-wrap:wrap}
+.acts a{flex:1 1 auto;min-width:180px;text-decoration:none;padding:21px 24px;display:block}
+.acts a + a{border-left:1.5px solid var(--ink)}
+@media(max-width:560px){.acts a + a{border-left:0;border-top:1.5px solid var(--ink)}}
+.acts .k{font-family:"IBM Plex Mono",monospace;font-size:.6rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--steel);display:block}
+.acts .v{font-size:1.2rem;font-weight:800;text-transform:uppercase;letter-spacing:-.02em;
+  margin-top:5px;display:block}
+.acts .home{background:var(--ink);color:var(--paper)}
+.acts .home .k{color:#9AA3B0}
+.acts .call{background:var(--stamp);color:var(--paper-hi)}
+.acts .call .k{color:#F0C9C2}
+:focus-visible{outline:3px solid var(--stamp);outline-offset:3px}
 </style>
 </head>
 <body>
-<div>
+<div class="wrap">
+  <p class="code">Error 404 &mdash; Record not found</p>
   <h1>That page isn't here.</h1>
   <p>The link may be old or mistyped. Everything about generator service and membership is on the main page.</p>
-  <a class="btn" href="./">Go to the main page</a>
-  <a class="tel" href="tel:+19084769612">Or call or text (908) 476-9612</a>
+  <div class="acts">
+    <a class="home" href="./"><span class="k">Go to</span><span class="v">Main page</span></a>
+    <a class="call" href="tel:+19084769612"><span class="k">Or call or text</span><span class="v">(908) 476-9612</span></a>
+  </div>
 </div>
 </body>
 </html>
