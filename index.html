@@ -23,7 +23,7 @@
 
 <style>
 /* Hallmark · shape: Conversational FAQ, from draw 0ce91b · genre: editorial · theme: Newsprint (deal 3/3, seed prompt-da39·68b67dc3·2026-10-23·r0) · redesign: full
- * hero: Ledge · nav: masthead (swapped from the draw's floating pill; the theme sets radius 0 and rules, never pills) · footer: statement · imagery: none (no photograph exists and inventing one is barred) · signature: twelve minutes set as a box score, the figure the whole argument turns on
+ * hero: Settled (swapped from the draw's Ledge; Ledge rests the head at the base of a tall field, which with no photograph rendered as 380px of empty paper at 1440x900) · nav: masthead (swapped from the draw's floating pill; the theme sets radius 0 and rules, never pills) · footer: statement · imagery: none (no photograph exists and inventing one is barred) · signature: twelve minutes set as a box score, the figure the whole argument turns on
  * axes: light/slab-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P5 H4 E4 S5 R4 V4 · weakest: H, the checklist and the price list both wanted agate rows; set the prices at display size and held the checklist at text size so one listing leads */
 /* Hallmark · swapped the draw's index of projects for the theme's agate listings · no project, client or photograph exists and 46a bars inventing one */
@@ -40,10 +40,9 @@
 .masthead-tel:hover { text-decoration-thickness: 2px; }
 
 /* ---------- hero: Ledge ---------- */
-.hero { min-height: 100dvh; display: flex; flex-direction: column; justify-content: flex-end; padding-block: var(--space-2xl) var(--space-3xl); border-bottom: 2px solid var(--color-rule-2); }
-.dateline { font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); margin-bottom: var(--space-lg); }
-.hero h1 { font-size: var(--text-display); max-width: 14ch; }
-.hero .lead { margin-top: var(--space-lg); }
+.hero { min-height: min(calc(100svh - 52px), 840px); display: flex; flex-direction: column; justify-content: center; padding-block: var(--space-2xl); border-bottom: 2px solid var(--color-rule-2); }
+.hero h1 { font-size: clamp(3rem, 8.5vw, 7.25rem); max-width: 11ch; }
+.hero .lead { margin-top: var(--space-lg); font-size: var(--text-xl); max-width: 34ch; }
 .actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-xl); }
 .btn { display: inline-block; text-decoration: none; border-radius: 0; padding: var(--space-md) var(--space-lg); font: var(--display-weight) var(--text-md)/1 var(--font-display); }
 .btn-primary { background: var(--color-ink); color: var(--color-paper); }
@@ -90,7 +89,10 @@ a:active { color: var(--color-accent); }
 .price-start a:hover { text-decoration-thickness: 2px; }
 
 /* ---------- ink band ---------- */
-.band { background: var(--color-ink); color: var(--color-paper); padding-block: var(--section-gap-s); }
+/* the ring is drawn over near-black here, so the band carries its own focus colour (26a) */
+.band { background: var(--color-ink); color: var(--color-paper); padding-block: var(--section-gap-s); --color-focus: var(--color-paper); }
+.band-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+@media (max-width: 60rem) { .band-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); } }
 .band h2 { color: var(--color-paper); max-width: 18ch; }
 .band .answer { color: var(--color-paper-2); }
 .band .btn-primary { background: var(--color-paper); color: var(--color-ink); }
@@ -139,8 +141,8 @@ a:active { color: var(--color-accent); }
   .hero { min-height: auto; padding-block: var(--space-2xl); }
 }
 
-.skip { position: absolute; left: -9999px; }
-.skip:focus-visible { left: var(--space-md); top: var(--space-md); z-index: var(--z-modal); background: var(--color-ink); color: var(--color-paper); padding: var(--space-sm) var(--space-md); }
+.skip { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip:focus-visible { width: auto; height: auto; overflow: visible; clip-path: none; left: var(--space-md); top: var(--space-md); z-index: var(--z-modal); background: var(--color-ink); color: var(--color-paper); padding: var(--space-sm) var(--space-md); }
 </style>
 </head>
 <body>
@@ -149,7 +151,7 @@ a:active { color: var(--color-accent); }
 <header class="masthead">
   <div class="container">
     <a class="masthead-name" href="./">Middletown Generator Service</a>
-    <span class="masthead-line">Maintenance, testing and repair</span>
+    <span class="masthead-line">Maintenance, testing and repair. Middletown, New Jersey.</span>
     <a class="masthead-tel" href="tel:+19084769612">(908) 476-9612</a>
   </div>
 </header>
@@ -158,7 +160,6 @@ a:active { color: var(--color-accent); }
 
 <section class="hero">
   <div class="container">
-    <p class="dateline">Middletown, New Jersey</p>
     <h1>Your generator starts every week.</h1>
     <p class="lead">That does not mean it will run your house.</p>
     <div class="actions">
@@ -284,15 +285,19 @@ a:active { color: var(--color-accent); }
 </section>
 
 <section class="band">
-  <div class="container">
-    <h2>Find out before the storm does.</h2>
-    <p class="answer">Tell me your town and the make and model of your unit. Text is fine, often faster.</p>
-    <a class="band-tel" href="tel:+19084769612">(908) 476-9612</a>
-    <div class="actions">
-      <a class="btn btn-primary" href="tel:+19084769612">Call now</a>
-      <a class="btn btn-secondary" href="sms:+19084769612?&amp;body=Generator%20service%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">Send a text</a>
+  <div class="container band-grid">
+    <div>
+      <h2>Find out before the storm does.</h2>
+      <p class="answer">Tell me your town and the make and model of your unit. Text is fine, often faster.</p>
     </div>
-    <p class="band-where">Middletown, New Jersey. Serving Monmouth County.</p>
+    <div>
+      <a class="band-tel" href="tel:+19084769612">(908) 476-9612</a>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+19084769612">Call now</a>
+        <a class="btn btn-secondary" href="sms:+19084769612?&amp;body=Generator%20service%20-%20my%20town%20is%3A%20%0Amake%2Fmodel%3A%20">Send a text</a>
+      </div>
+      <p class="band-where">Middletown, New Jersey. Serving Monmouth County.</p>
+    </div>
   </div>
 </section>
 
